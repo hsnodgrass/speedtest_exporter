@@ -22,9 +22,7 @@ def main():
             st_json = json.loads(s2[0])
         except json.decoder.JSONDecodeError:
             eprint("ERROR: Failed to parse JSON, setting all values to 0!")
-            st_json['download'] = 0
-            st_json['upload'] = 0
-            st_json['ping'] = 0
+            st_json = {'download': 0, 'upload': 0, 'ping': 0}
 
         download_speed_gauge.set(st_json['download'])
         upload_speed_gauge.set(st_json['upload'])
