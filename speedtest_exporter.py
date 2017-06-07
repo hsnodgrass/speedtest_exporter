@@ -1,9 +1,8 @@
 #!/bin/env/python3
-
+from __future__ import print_function
 import subprocess
 import json
 import sys
-from __future__ import print_function
 from prometheus_client import Gauge, start_http_server
 
 download_speed_gauge = Gauge('download_speed', 'Download speed in bits')
